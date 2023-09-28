@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Buenrostro & Asociados</title>
+    <link rel="stylesheet" href="src/css/estilos.css">
+    <link rel="stylesheet" href="src/js/jquery-ui-themes-1.13.2/jquery-ui.css">
+
+</head>
+<body id="body">
+    
+    <header>
+        <div class="logo_menu">
+            <img src="src/assets/image/LOGO BUENROSTRO & ASOCIADOS MARCA.001.png" alt="Logo Trubutaria" class="logo">
+            <img src="src/assets/image/LOGO BUENROSTRO & ASOCIADOS MARCA.001_INVERTIDO.png" alt="Logo Trubutaria Invertido" class="logo_invertido">
+        </div>
+    </header>
+    
+    <div class="menu__side" id="menu_side">
+        <div class="menu_btn">
+            <img src="src/assets/image/menu.png" id="btn_open" class="img_menu">
+            <h5>Menu</h5>
+        </div>
+        
+        <div class="options__menu">	
+            <a href="#">
+                <div class="option">
+                    <img src="src/assets/image/folder.png" class="img_tramites">
+                    <h4>Trámites</h4>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </div>
+                <div class="sub-menu">
+                    <a href="#">
+                        <div class="option">
+                            <img src="src/assets/image/persona_Fisica.png" class="img_pFisica">
+                            <h4>Persona Física</h4>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="option">
+                            <img src="src/assets/image/persona_Moral.png" class="img_pMoral">
+                            <h4>Persona Moral</h4>
+                        </div>
+                    </a>
+                    
+                </div>
+            </a>
+        
+            <a href="#">
+                <div class="option">
+                    <img src="src/assets/image/formularios.png" class="img_formularios">
+                    <h4>Formularios</h4>
+                </div>
+            </a>
+                    
+            <a href="#">
+                <div class="option">
+                    <img src="src/assets/image/tramites_Comunes.png" class="img_trComun">
+                    <h4>Tramites comunes</h4>
+                </div>
+            </a>
+        
+            <a href="#" >
+                <div class="option">
+                    <img src="src/assets/image/acerca de.png" class="img_aDe">
+                    <h4>Acerca de...</h4>
+                </div>
+            </a>
+            <a href="#">
+                <div class="option">
+                    <img src="src/assets/image/actualizacion.png" class="img_ac">
+                    <h4>Actualizaciones</h4>
+                </div>
+            </a>
+            <div class="menu_tema">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+            </div>
+        </div>       
+    </div>
+    <main>
+        <div id="contenido_Dash">
+            <!-- <h1>Algunas leyes</h1><br>
+                <p>1.-Estado de derecho: Es un principio fundamental en el que se establece que todas las personas y entidades están sujetas a las leyes y que estas se aplican de manera justa y equitativa.</p> <br>
+                <p>2.- Constitución: Es el documento fundamental que establece la estructura del gobierno, los derechos y las libertades fundamentales de los ciudadanos, y los límites del poder estatal. Define los principios generales y los derechos básicos de una nación.</p>
+                <br> -->
+                
+                <div class="fisica">
+                    <canvas id="pdfChart" ></canvas>
+                </div>
+           
+            <!-- <div class="moral">
+                <h1>moral</h1>
+                <canvas id="pdfChart2"  width="100%"></canvas>
+            </div>
+            <div class="formularios">
+                <h1>formularios</h1>
+                <canvas id="pdfChart3" width="300px"></canvas>
+            </div> -->
+
+        </div>
+
+        <div id="contenido_Física">
+            <h1>Trámites - Persona Fisica</h1>
+            <div id="searchContainer">
+                <input type="text" id="searchInput" placeholder="Buscar archivo PDF por nombre" list="suggestions">
+                <button id="searchButton">Buscar</button>
+                <datalist id="suggestions">
+                </datalist>
+                <div id="pdfContainer"></div>
+            </div>
+            <iframe id="pdfIframe" width="180%" height="490" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div id="contenido_Moral">
+            <h1>Trámites - Persona Moral</h1>
+            <div id="searchContaine2">
+                <input type="text" id="searchInput2" placeholder="Buscar archivo PDF por nombre" list="suggestions2">
+                <button id="searchButton2">Buscar</button>
+                <datalist id="suggestions2">
+                </datalist>
+                <div id="pdfContainer2"></div>
+            </div>
+            <iframe id="pdfIframe2" width="180%" height="490" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div id="contenido_Formularios">
+            <h1>Formularios</h1>
+            <div id="searchContainer3">
+                <input type="text" id="searchInput3" placeholder="Buscar archivo PDF por nombre" list="suggestions3">
+                <button id="searchButton3">Buscar</button>
+                <datalist id="suggestions3">
+                </datalist>
+                <div id="pdfContainer3"></div>
+            </div>
+            <iframe id="pdfIframe3" width="180%" height="490" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+        <div id="contenido_TamitesC">
+            <h1 >Tramites comunes</h1>
+            <div class="table-container">
+                <table id="tramitesTable">
+                    <thead>
+                        <tr>
+                            <th class="firstColum">Nombre del trámite</th>
+                            <th class="thirdColum">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+                    </tbody>
+                </table>
+            </div>
+            <div class="pdfContainer4">
+                <iframe id="pdfIframeViewer"  width="160%" height="490" class="pdfIframeViewer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div id="contenido_Acerca">
+                <!-- Texto1 -->
+                <div class="aDe">
+                    <h1> Acerca de... </h1>
+                </div>
+                <!--Imagen1-->
+                <div>
+                    <img src="src/assets/image/LOGO BUENROSTRO & ASOCIADOS MARCA.001.png" alt="Logo_p" class="logo2">
+                    <img src="src/assets/image/LOGO BUENROSTRO & ASOCIADOS MARCA.001_INVERTIDO.png" alt="logo_p2" class="logo_invertido2">
+                </div>
+                <!--Texto4-->
+                <div class="dato_Personal2">
+                    <h1>Abogado y Asesor Tributario</h1>
+                </div>
+                <!--Texto5-->
+                <div class="dato_Personal3">
+                    <h1>(044) 962 152 8262</h1>
+                </div>
+                <!--Imagen1-->
+                <div>
+                    <img src="src/assets/image/facebook.png" class="facebook_icon">
+                </div>
+                <!--Texto6-->
+                <div class="facebook">
+                    <p>
+                    <a href="https://www.facebook.com/BAAPatrimoniales/">Buenrostro y Asosiados</a>
+                    </p>
+                </div>
+                 <!--Imagen2-->
+                 <div>
+                    <img src="src/assets/image/hotmail.png" class="hotmail_icon">
+                </div>
+                <!--Texto7-->
+                <div class="hotmail">
+                    <h1>joseluis_bl@hotmail.com</h1>
+                </div>
+                <!--Texto8-->
+                <div class="developers">
+                    <h1>Desarrolladores:</h1>
+                    <h1>Ángel Antonio Hernández Gómez</h1>
+                    <h1>Horacio Josué Marroquin Herrera</h1>
+                </div>
+                <!--Texto9-->
+                <div class="direccion">
+                    <h1>Calle río Cosalpa Mz. 13 Núm. 3</h1>
+                    <h1>Fracc. Ecológico las Hortecias</h1>
+                    <h1>Tapachula, Chiapas C.P. 30797.</h1>
+                </div>
+        </div>
+
+        <div id="contenido_Actulizaciones">
+            <h1>Actualizaciones</h1>
+            <strong><div id="message">Status message...</div></strong>
+            <br />
+            <p>
+              Actualiza la aplicación para acceder a las últimas características y
+              mejoras.
+            </p>
+            <br />
+        </div>
+
+    </main>
+    <footer>
+        <!-- aqui va el copyrrayt -->
+        <p class="copyright">&copy; 2023 Buenrostro & Asociados | Todos los derechos reservados.</p>
+    </footer>
+    <script src="src/js/chart.js"></script>
+    <script src="src/js/jquery-3.7.0.min.js"></script>
+    <script src="src/js/jquery-ui-1.13.2/jquery-ui-1.13.2/jquery-ui.js"></script>
+    <script src="src/js/jquery-ui-1.13.2/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <script src="src/js/script.js"></script>
+</body>
+</html>

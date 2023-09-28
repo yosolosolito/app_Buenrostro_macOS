@@ -1,0 +1,69 @@
+{
+  "name": "tributaria_buenrostro",
+  "version": "1.0.5",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "dist": "electron-builder",
+    "publish": "electron-builder --mac --win -p always"
+  },
+  "repository": "https://github.com/Josue775/electron-test-update",
+  "publish": {
+    "provider": "github",
+    "releaseType": "release"
+  },
+  "build": {
+    "appId": "yo.com",
+    "productName": "Tributaria Buenrostro App",
+    "win": {
+      "target": {
+        "target": "nsis",
+        "arch": [
+          "x64",
+          "ia32"
+        ]
+      },
+      "icon": "src/assets/image/reducido.ico"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "src/assets/image/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "keywords": [],
+  "author": {
+    "name": "Horacio Josue Marroquin Herrera",
+    "email": "josue.maarroquin@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Angel Antonio Hernandez Gomez"
+    }
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^25.1.1",
+    "electron-builder": "^24.6.4",
+    "electron-rebuild": "^3.2.9",
+    "electron-updater": "^6.1.4"
+  },
+  "dependencies": {
+    "better-sqlite3": "^8.6.0",
+    "chart.js": "^4.4.0",
+    "electron-sqlite": "^0.0.1",
+    "mysql": "^2.18.1",
+    "sqlite3": "^5.1.6"
+  }
+}
